@@ -253,7 +253,7 @@ class ClienteController extends Controller
      *          response=404,
      *          description="NOT FOUND",
      *          @OA\JsonContent(
-     *              @OA\Property(property="msg", type="string", example="No se pudo realizar correctamente la operación"),
+     *              @OA\Property(property="message", type="string", example="No se pudo realizar correctamente la operación"),
      *          )
      *      )
      * )
@@ -264,7 +264,7 @@ class ClienteController extends Controller
 
         if(is_null($cliente))
         {
-            return response()->json(['msg' => 'No se pudo realizar correctamente la operación'],404);
+            return response()->json(['message' => 'No se pudo realizar correctamente la operación'],404);
         }
 
         $cliente->delete();

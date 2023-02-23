@@ -340,7 +340,7 @@
                             "application/json": {
                                 "schema": {
                                     "properties": {
-                                        "msg": {
+                                        "message": {
                                             "type": "string",
                                             "example": "No se pudo realizar correctamente la operación"
                                         }
