@@ -1,6 +1,6 @@
 # API LARAVEL 10 
 
-<p align="center">Esta es una actualización del video Api Para Principiantes actualizada a Laravel 10, el link del primer video lo pueden encontrar en este link: <a href="https://youtu.be/VnIKwzysvHM" target="_blank">Video</a></p>
+<p align="center">Esta es una actualización del video Api Para Principiantes actualizada a Laravel 10, el link del primer video lo pueden encontrar en este link: <a href="https://youtu.be/VnIKwzysvHM" target="_blank">Como crear una API en Laravel 9</a></p>
 
 <p>Este proyecto esta hecho con Laravel 10 y hace uso de Modelos, Controladores, Rutas API, Swagger.</p>
 
