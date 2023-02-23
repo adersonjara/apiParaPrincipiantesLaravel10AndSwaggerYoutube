@@ -24,7 +24,7 @@ class ClienteController extends Controller
      *     tags={"Cliente"},
      *     @OA\Response(
      *         response=200,
-     *         description="success",
+     *         description="OK",
      *         @OA\JsonContent(
      *             @OA\Property(
      *                 type="array",
@@ -95,14 +95,22 @@ class ClienteController extends Controller
      *         )
      *      ),
      *      @OA\Response(
-     *          response=200,
-     *          description="success",
+     *          response=201,
+     *          description="CREATED",
      *          @OA\JsonContent(
      *              @OA\Property(property="id", type="number", example=1),
      *              @OA\Property(property="nombres", type="string", example="Aderson Felix"),
      *              @OA\Property(property="apellidos", type="string", example="Jara Lazaro"),
      *              @OA\Property(property="created_at", type="string", example="2023-02-23T00:09:16.000000Z"),
      *              @OA\Property(property="updated_at", type="string", example="2023-02-23T12:33:45.000000Z")
+     *          )
+     *      ),
+     *      @OA\Response(
+     *          response=422,
+     *          description="UNPROCESSABLE CONTENT",
+     *          @OA\JsonContent(
+     *              @OA\Property(property="message", type="string", example="The apellidos field is required."),
+     *              @OA\Property(property="errors", type="string", example="Objeto de errores"),
      *          )
      *      )
      * )
@@ -135,7 +143,7 @@ class ClienteController extends Controller
      *     ),
      *     @OA\Response(
      *         response=200,
-     *         description="success",
+     *         description="OK",
      *         @OA\JsonContent(
      *              @OA\Property(property="id", type="number", example=1),
      *              @OA\Property(property="nombres", type="string", example="Aderson Felix"),
@@ -143,7 +151,14 @@ class ClienteController extends Controller
      *              @OA\Property(property="created_at", type="string", example="2023-02-23T00:09:16.000000Z"),
      *              @OA\Property(property="updated_at", type="string", example="2023-02-23T12:33:45.000000Z")
      *         )
-     *     )
+     *     ),
+     *      @OA\Response(
+     *          response=404,
+     *          description="NOT FOUND",
+     *          @OA\JsonContent(
+     *              @OA\Property(property="message", type="string", example="No query results for model [App\\Models\\Cliente] #id"),
+     *          )
+     *      )
      * )
      */
     public function show(Cliente $cliente)
@@ -193,6 +208,14 @@ class ClienteController extends Controller
      *              @OA\Property(property="apellidos", type="string", example="Jara Lazaro Editado"),
      *              @OA\Property(property="created_at", type="string", example="2023-02-23T00:09:16.000000Z"),
      *              @OA\Property(property="updated_at", type="string", example="2023-02-23T12:33:45.000000Z")
+     *          )
+     *      ),
+     *      @OA\Response(
+     *          response=422,
+     *          description="UNPROCESSABLE CONTENT",
+     *          @OA\JsonContent(
+     *              @OA\Property(property="message", type="string", example="The apellidos field is required."),
+     *              @OA\Property(property="errors", type="string", example="Objeto de errores"),
      *          )
      *      )
      * )

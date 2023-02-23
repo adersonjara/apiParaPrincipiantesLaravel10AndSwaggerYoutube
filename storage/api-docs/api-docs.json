@@ -20,7 +20,7 @@
                 "operationId": "de55d50d1b708d9e5c63ee3f8fe8f54a",
                 "responses": {
                     "200": {
-                        "description": "success",
+                        "description": "OK",
                         "content": {
                             "application/json": {
                                 "schema": {
@@ -94,8 +94,8 @@
                     }
                 },
                 "responses": {
-                    "200": {
-                        "description": "success",
+                    "201": {
+                        "description": "CREATED",
                         "content": {
                             "application/json": {
                                 "schema": {
@@ -125,6 +125,26 @@
                                 }
                             }
                         }
+                    },
+                    "422": {
+                        "description": "UNPROCESSABLE CONTENT",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "properties": {
+                                        "message": {
+                                            "type": "string",
+                                            "example": "The apellidos field is required."
+                                        },
+                                        "errors": {
+                                            "type": "string",
+                                            "example": "Objeto de errores"
+                                        }
+                                    },
+                                    "type": "object"
+                                }
+                            }
+                        }
                     }
                 }
             }
@@ -148,7 +168,7 @@
                 ],
                 "responses": {
                     "200": {
-                        "description": "success",
+                        "description": "OK",
                         "content": {
                             "application/json": {
                                 "schema": {
@@ -172,6 +192,22 @@
                                         "updated_at": {
                                             "type": "string",
                                             "example": "2023-02-23T12:33:45.000000Z"
+                                        }
+                                    },
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    },
+                    "404": {
+                        "description": "NOT FOUND",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "properties": {
+                                        "message": {
+                                            "type": "string",
+                                            "example": "No query results for model [App\\\\Models\\\\Cliente] #id"
                                         }
                                     },
                                     "type": "object"
@@ -249,6 +285,26 @@
                                         "updated_at": {
                                             "type": "string",
                                             "example": "2023-02-23T12:33:45.000000Z"
+                                        }
+                                    },
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    },
+                    "422": {
+                        "description": "UNPROCESSABLE CONTENT",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "properties": {
+                                        "message": {
+                                            "type": "string",
+                                            "example": "The apellidos field is required."
+                                        },
+                                        "errors": {
+                                            "type": "string",
+                                            "example": "Objeto de errores"
                                         }
                                     },
                                     "type": "object"
